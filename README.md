@@ -12,7 +12,7 @@ This project is a template for an upgradeable ERC721 (NFT) smart contract, it wa
 - Testing
 - Deployment
 - Upgrading
-  
+
 ## Introduction
 
 This project provides a standard ERC721 implementation with upgradeability features. The smart contract follows the OpenZeppelin upgradeable contract pattern, allowing for future modifications and improvements without losing the existing state.
@@ -43,21 +43,23 @@ This project is built using the following tools and libraries:
    ```bash
    git clone https://github.com/KineticsOfWeb3/Upgradeable-ERC721-NFT.git
    cd Upgradeable-ERC721-NFT
+   ```
 
 INSTALL
 yarn/npm install
 
 ## USAGE Compile the smart contract
 
-  npx hardhat compile
+npx hardhat compile
 (or use yarn)
 
 ## Testing
 
 You can test the contract using Hardhat's test framework. The project includes unit tests
-to verify the functionality of the ERC721 NFT contract.    npx hardhat test
+to verify the functionality of the ERC721 NFT contract. npx hardhat test
 
 ## Deployment
+
 Deploy the upgradeable contract:
 
 To deploy the proxy and the logic contract, run the following command:
@@ -68,9 +70,10 @@ Deploy upgrades:
 If you need to deploy an upgrade to the contract, modify the logic contract, and deploy the upgrade using:
 npx hardhat run scripts/upgrade.js --network robsten/localhost
 
-## Run the unit testing with:   npx hardhat test
+## Run the unit testing with: npx hardhat test
 
 ## Upgrading
+
 I Use OpenZeppelin's proxy upgrade pattern, allowing for seamless upgrades without resetting state. To upgrade the contract:
 Make modifications to the logic contract.
 
@@ -78,3 +81,4 @@ Run the upgrade script:
 npx hardhat run scripts/upgrade.js --network robsten/localhost
 I now verify that the new logic is functioning as expected by running the tests again.
 
+//
